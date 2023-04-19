@@ -12,7 +12,8 @@ class OptionData
     double b;  // cost of carry
 
     OptionData();
-    OptionData(double S, double K, double T, double sig, double r);
+    OptionData(double S_, double K_, double T_, double sig_, double r_);
+    OptionData(double S_, double K_, double T_, double sig_, double r_, double b_);
     OptionData(const OptionData& src);
     ~OptionData();
     OptionData& operator = (const OptionData& src);

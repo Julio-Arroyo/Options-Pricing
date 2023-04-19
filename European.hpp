@@ -8,6 +8,10 @@
 
 static boost::math::normal_distribution<> NormalDist;
 
+double getD1(const OptionData& data);
+
+double getD2(const OptionData& data);
+
 double priceOption(const bool isCall, const OptionData& data);
 
 #endif

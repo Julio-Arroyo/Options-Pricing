@@ -1,5 +1,6 @@
-// g++ -std=c++14 -I /Users/jarroyo/boost_1_82_0 -o test Test.cpp European.cpp OptionData.cpp
+// g++ -std=c++14 -I /Users/jarroyo/boost_1_82_0 -o test Test.cpp European.cpp OptionData.cpp Greeks.cpp
 #include "European.hpp"
+#include "Greeks.hpp"
 #include <iostream>
 #include <vector>
 
@@ -38,5 +39,8 @@ int main(int argc, char* argv[])
         std::cout << "P -> Expected: " << P << " - " << solns[i].P << " Actual" << std::endl;
         std::cout << "C -> Expected: " << C << " - " << solns[i].C << " Actual" << std::endl << std::endl;
     }
-    return 0;
+    
+    // Greeks tests
+    OptionData greek1(105, 100, 0.5, 0.36, 0.1, 0.0);
+    std::cout << "Expected delta call: " << 0.5946 << " vs Actual: " << delta(greek1) << std::endl;
 }
