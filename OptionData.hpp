@@ -16,6 +16,6 @@ class OptionData
     OptionData(const OptionData& src);
     ~OptionData();
     OptionData& operator = (const OptionData& src);
-}
+};
 
 #endif

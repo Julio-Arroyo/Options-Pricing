@@ -26,6 +26,11 @@ OptionData::OptionData(const OptionData& src)
     b = src.r;
 }
 
+OptionData::~OptionData()
+{
+    
+}
+
 // Operators
 OptionData& OptionData::operator = (const OptionData& src)
 {
